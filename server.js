@@ -110,6 +110,7 @@ app.post("/schedules", async (req, res) => {
     startDate,
     endDate,
   });
+  await schedule.save();
 
   try {
     const savedSchedule = await schedule.save();
